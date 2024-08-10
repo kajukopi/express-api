@@ -1,0 +1,27 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "express-api",
+  "main": "index.js",
+  "author": "Karim Roy Tampubolon",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon ./src/index",
+    "start": "node ./src/index",
+    "mongo-start": "docker run -d -p 27017:27017 --name mymongo -v mongo-data:/data/db mongo",
+    "mongo-stop": "docker stop mymongo",
+    "mongo-remove": "docker rm -f mymongo"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "nodemonConfig": {
+    "ext": "js,mjs,json,css,html,hbs"
+  }
+}
